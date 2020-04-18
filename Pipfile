@@ -11,6 +11,7 @@ flask-sqlalchemy = "*"
 pandas = "*"
 yfinance = "*"
 pandas-datareader = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"

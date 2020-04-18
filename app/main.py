@@ -55,8 +55,7 @@ def populate_database(stock_symbol, stock_data, db):
 
     for i in df.index:
         # insert the values into the database
-        db.session.add(Stock(stock_name=stock_symbol, date=str(i), open=str(df['Open'][i]), high=float(df['High']
-                                                                  [i]), low=float(df['Low'][i]), close=float(df['Close'][i]), adj_close=float(df['Adj Close'][i]), volume=float(df['Volume'][i])))
+        db.session.add(Stock(stock_name=stock_symbol, date=str(i), open=str(df['Open'][i]), high=float(df['High'][i]), low=float(df['Low'][i]), close=float(df['Close'][i]), adj_close=float(df['Adj Close'][i]), volume=float(df['Volume'][i])))
         db.session.commit()
 
 
@@ -74,5 +73,5 @@ def stocks():
         return render_template('stocks.html',values=Stock.query.all())
 
 #run the program by running this app
-if __name__ == "__main__":
-    app.run(debug=True)
+#if __name__ == "__main__":
+ #   app.run(debug=True)
